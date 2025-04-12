@@ -12,12 +12,13 @@ message_list = [
   }
 ]
 
+puts "Hello! How can I help you today?"
+puts "-" * 50
+
 user_message =""
 
 while user_message != "bye"
 
-  puts "Hello! How can I help you today?"
-  puts "-" * 50
   user_message = gets.chomp
   puts "-" * 50
 
@@ -47,5 +48,6 @@ choices = api_response.fetch("choices").at(0)
 response = choices.fetch("message").fetch("content")
 
 puts response
+puts "-" * 50
 
 end
